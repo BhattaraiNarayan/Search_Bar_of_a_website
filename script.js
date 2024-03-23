@@ -1,3 +1,4 @@
+// javascript coding starts here
 const data = [
   {
     id: 1,
@@ -147,8 +148,6 @@ displayProducts(data.filter(item=>
 }
 });
 
-
-
 const setCategories=()=>{
 const allCats=data.map((item)=>item.cat);
 const categories=[
@@ -174,7 +173,6 @@ const setPrices=()=>{
   const priceList=data.map((item)=>item.price);
   const minPrice=Math.min(...priceList)
   const maxPrice=Math.max(...priceList)
-
   priceRange.min=minPrice;
   priceRange.max=maxPrice;
   priceRange.value=maxPrice;
@@ -185,6 +183,5 @@ const setPrices=()=>{
     displayProducts(data.filter((item)=>item.price<=e.target.value));
   });
 };
-
 setCategories();
 setPrices();
